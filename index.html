@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Docker term</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark" id="navBar" >
+        <!--  -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="image/docker_facebook_share.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Welcome To web-based Docker CLI
+          </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="#" onclick="openNav('syscmd')" id="syscmd" >System commands <span class="sr-only"></span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Docker commands
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#" onclick="openNav('DImg')" id="DImg" >$Docker images</a>
+                  <a class="dropdown-item" href="#" onclick="openNav('DPs')" id="DPs" >Docker ps</a>
+                  <a class="dropdown-item" href="#" onclick="openNav('DRun')" id="DRun" >Docker run</a>
+                  <a class="dropdown-item" href="#" onclick="openNav('DRm')" id="DRm" >Docker rm</a>
+                  <a class="dropdown-item" href="#" onclick="openNav('DEx')" id="DEx" >Docker exec</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" onclick="openNav('DHelp')" id="MHelp" >Docker help</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openNav('MHelp')" id="DHelp">Docker Mini Tutos</a>
+              </li>
+           
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <div class="custom-control custom-switch" onclick ="theming()">
+                <input type="checkbox" class="custom-control-input" id="switchTheme" onclick="theming()">
+                <label class="custom-control-label" for="switchTheme">
+                    <span class=" fa fa-moon-o text-white" aria-hidden="true"></span>
+                    </label>
+              </div>
+          </form>
+        </div>
+      </nav>
+     
+      <div class="container-fluid">
+
+    <div id="screen">
+        <div id="mySidenav" class="sidenav row ">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="side" style="padding-top: 100px;">
+<h3 >Here is the panel of help </h3>
+<code>test</code>
+            </div>
+          </div>
+    <div class="main container row">
+        <img src="image/macbook-blank-screen.png" alt="" />
+        <div id='terminal'>
+            <pre id="d1">
+                <!-- <div id="d1">  </div> --> Run the following for quick instructions:<br>
+Docker commands help
+            </pre>
+            <div id="promptComand">
+                <span id="prompt">[root@localhost~]$  </span> <input type="text" id="in1"  placeholder="Type your command here"/>
+                <button onclick="xRequ()" id="submitt" > </button>
+            </div>
+           
+ </div>
+    </div>
+    
+</div>
+</div>
+<script src="jsFile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
+

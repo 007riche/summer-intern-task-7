@@ -1,0 +1,393 @@
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.Day {
+  background-color: #03101d;
+}
+
+#side {
+  color: #f1f1f1;
+}
+
+button#submitt {
+  display: none;
+}
+/* The sidebar menu */
+ .sidenav {
+    height: 98%; /* Full-height: remove this if you want "auto" height */
+    width: calc(10%); /* Set the width of the sidebar */
+    position: fixed; /*Fixed Sidebar (stay in place on scroll)*/
+    /* z-index: 1; Stay on top */
+    top: 0; /*Stay at the top*/
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.849); /* Black*/
+    overflow-x: hidden; /*Disable horizontal scroll*/
+    /* margin-top: 55px; */
+    padding-left: 25px;
+    padding-top: 20px;
+    overflow-y: scroll;
+  transition: 0.5s;
+    resize: horizontal;
+    text-align: start;
+  } 
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    /* margin-left: 50px; */
+    width: 25px;
+    height: 25px;
+  }
+
+  
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 2.5vh;
+    /* font-size: ; */
+     color: #ffffff;
+    display: block;
+
+  }
+   
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #ffee02;
+  }
+   /* width */
+   .sidenav::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sidenav::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.767); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.sidenav::-webkit-scrollbar-thumb {
+  background: rgb(77, 77, 77); 
+  border-radius: 10px;
+}
+
+#d1 {
+  color: #f1f1f1;
+  overflow-y: scroll;
+}
+
+#d1::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+#d1::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(126, 126, 126, 0.664); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+#d1::-webkit-scrollbar-thumb {
+  background: rgb(0, 224, 68); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#d1::-webkit-scrollbar-thumb:hover {
+  background: #009719; 
+}
+
+
+/* Handle on hover */
+.sidenav::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a; 
+}
+
+  #in1 {
+    display: inline;
+    color: #ffffff;
+    border: none;
+    width: 85%;
+    background-color: #00000000;
+    height: 20px;   
+  }
+
+  #in1:focus {
+    outline: none;
+}
+
+#in1::placeholder {
+  color: #f1f1f177;
+}
+    
+ /* width */
+ #terminal::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+#terminal::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.767); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+#terminal::-webkit-scrollbar-thumb {
+  background: rgb(77, 77, 77); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+#terminal::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a; 
+}
+
+#screen {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 85vh;
+    max-width: 100vw;
+    
+    }
+
+.container {
+  margin-top: 2%;
+    display: flex;
+    height:  85vh;
+    width:  100vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+ 
+ #terminal {
+     z-index: 1;
+     color: #f1f1f1;
+        position: relative;
+        top: 7vh;
+        left: 11.5vw;
+        /* border: 2px solid wheat; */
+        background-color: #000000af;
+        height:  73.5vh;
+        width:  65vw;
+       resize: both;
+        overflow: scroll;
+ }
+
+.container img {
+    z-index: -100;
+    height:  calc(95%);
+      width:  calc(88%);
+      position: absolute;
+      /* border: 2px solid wheat; */
+      
+}  
+
+#promptComand {
+  margin: 0;
+	padding: 0;
+}
+
+input[type="range"] {
+ width: 3em;
+ height: 300px;
+ color: #818181;
+ 
+} 
+
+ #comand {
+  
+  display: inline;
+  color: #ffffff;
+  border: none;
+  width: 50%;
+  background-color: #00000000;
+  height: 20px;
+
+}
+
+#comand:focus {
+  outline: none;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #terminal {
+     z-index: 1;
+       color: #f1f1f1;
+          position: relative;
+          top: 7.5vh;
+          left: 14vw;
+          /* border: 2px solid wheat; */
+          background-color: #000000af;
+          height:  77vh;
+          width:  73vw;
+         resize: both;
+          overflow: scroll;
+   
+}
+
+.container img {
+  z-index: -100;
+  height:  calc(100%);
+ 
+    width:  calc(100%);
+    position: absolute;
+    /* border: 2px solid wheat; */
+    
+}  
+
+.sidenav {
+  height: 98%; /* Full-height: remove this if you want "auto" height */
+  width: calc(10%); /* Set the width of the sidebar */
+  position: fixed; /*Fixed Sidebar (stay in place on scroll)*/
+  /* z-index: 1; Stay on top */
+  top: 0; /*Stay at the top*/
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.849); /* Black*/
+  overflow-x: hidden; /*Disable horizontal scroll*/
+  /* margin-top: 55px; */
+  padding-top: 20px;
+  padding-left: 25px;
+  overflow-y: scroll;
+transition: 0.5s;
+  resize: horizontal;
+  text-align: start;
+  width: 100%; 
+
+} 
+
+#comand {
+  
+  display: inline;
+  color: #ffffff;
+  border: none;
+  width: 50%;
+  background-color: #00000000;
+  height: 20px;
+
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  #terminal {
+     z-index: 1;
+     color: #f1f1f1;
+        position: relative;
+        top: 7vh;
+        left: 11.5vw;
+        /* border: 2px solid wheat; */
+        background-color: #000000af;
+        height:  72.5vh;
+        width:  64.5vw;
+       resize: both;
+        overflow: scroll;
+   
+}
+/* .sidenav {
+  width: 0px; 
+  display: none;
+}  */
+#comand {
+  
+  display: inline;
+  color: #ffffff;
+  border: none;
+  width: 50%;
+  background-color: #00000000;
+  height: 20px;
+
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #terminal {
+   z-index: 1;
+     color: #f1f1f1;
+        position: relative;
+        top: 7vh;
+        left: 11.5vw;
+        /* border: 2px solid wheat; */
+        background-color: #000000af;
+        height:  72.5vh;
+        width:  64.5vw;
+       resize: both;
+        overflow: scroll;
+ }
+#comand {
+  
+  display: inline;
+  color: #ffffff;
+  border: none;
+  width: 50%;
+  background-color: #00000000;
+  height: 20px;
+
+}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #terminal {
+    z-index: 1;
+     color: #f1f1f1;
+        position: relative;
+        top: 7vh;
+        left: 11.5vw;
+        /* border: 2px solid wheat; */
+        background-color: #000000af;
+        height:  72vh;
+        width:  64.5vw;
+       resize: both;
+        overflow: scroll;
+}
+#comand {
+  
+  display: inline;
+  color: #ffffff;
+  border: none;
+  width: 50%;
+  background-color: #00000000;
+  height: 20px;
+
+}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1709px and up) */
+@media only screen and (min-width: 1710px) {
+  #terminal {
+       z-index: 1;
+     color: #f1f1f1;
+        position: relative;
+        top: 7vh;
+        left: 11.5vw;
+        /* border: 2px solid wheat; */
+        background-color: #000000af;
+        height:  73vh;
+        width:  100vw;
+       resize: both;
+        overflow: scroll;
+}
+#comand {
+  
+  display: inline;
+  color: #ffffff;
+  border: none;
+  width: 50%;
+  background-color: #00000000;
+  height: 20px;
+
+}
+}

@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+""" The bove line is the SheBang env
+which allows to precise the shell to use to run the file
+
+"""
+
+import cgi
+import subprocess
+
+""" 
+The following line allows to precise the format of the output of execution of this current code
+the line just below it allows to seperate the "content-type" and the body of the data sent, here which will be 
+html page (as content-type is text/hmtl
+
+"""
+
+print("content-type: text/html")
+print()
+
+form = cgi.FieldStorage()
+command = form.getvalue("cmd")
+
+outP=subprocess.getoutput("sudo "+command)
+if "Docker commands help" in command:
+    print(
+        """
+        🧏‍♀️🧏‍♂️Remember💆‍♀️💆‍♂️: 💲Docker commands help is not really a docker command,\n
+        It is implemented here just for your learning purpose. \n
+        Note that here you can not execute container TTY-wise🖥 (TTY: TeleTYpe)  command here i.e. docker commands which need a TTY environment.\n
+        You can anyway try by your-self: \n
+        💲docker start containerName \n
+         💲docker attach containerName \n\n\n
+         
+👉Run the following commands to achieve the following objectives:👇🎯🎯 \n  b
+👉docker images: To see the locally(downloaded) availble images.\n 
+👉docker ps: To see currently running containers.\n 
+👉docker ps -a: To see all created containers. \n 
+👉docker run -dit --name containerName imageName: \n 
+To run a container named "containerName" and launched from an image named "imageName"\n 
+usage: docker run -dit --name OS1 centos \n 
+ You can find image on <a href="https://hub.docker.com/" target="_blank"> the official docker registry</a> \n 
+👉docker exec containerName dockerOSCommand: \n 
+Where dockerOSCommand is a system command based on the image used to launch th container\n 
+👉docker rm -f containerName: To remove(delete) a container named containerName\n 
+
+More documentation  <a href="https://docs.docker.com/" target="_blank">Here</a> \n 
+
+Happy learning🤗🤗\n 
+
+        """
+    )
+else:
+    print(outP)
+
+
+'''
+print("<h3>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</h3>")
+print("<h3>|                                Welcome to CGI                                                 |</h3>")
+print("<h3>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</h3>")
+'''
